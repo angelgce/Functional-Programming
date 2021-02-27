@@ -5,7 +5,7 @@ import java.util.function.Predicate;
 public class PredicateExample {
     public static void main(String[] args) {
         //creatin new persons
-        Person person1 = new Person("Angel", "Chavez", 27);
+        Person person1 = new Person("Angel", "Chavez", 26);
         Person person2 = new Person("Angel", "Elizondo", 65);
         Person person3 = new Person("Juan", "Chavez", 60);
         Person person4 = new Person("Lily", "Elizondo", 61);
