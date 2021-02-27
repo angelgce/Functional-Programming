@@ -20,7 +20,7 @@ public class PredicateExample {
         //printing in console their names
         list_person.forEach(person -> System.out.print(person.getName()+",  "));
         System.out.print(" <- List of names \n");
-        //creating a predicate 
+        //creating predicates
         Predicate<Person> predicate_EqualName = person -> person.getName().equals("Angel"); //name equals to Angel
         Predicate<Person> predicate_legalAge = person -> person.getAge() > 18;
         Predicate<Person> predicate_under60 = person -> person.getAge() < 60;
