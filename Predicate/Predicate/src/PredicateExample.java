@@ -22,11 +22,11 @@ public class PredicateExample {
         System.out.print(" <- List of names \n");
         //creating predicates
         Predicate<Person> predicate_EqualName = person -> person.getName().equals("Angel"); //name equals to Angel
-        Predicate<Person> predicate_legalAge = person -> person.getAge() > 18;
-        Predicate<Person> predicate_under60 = person -> person.getAge() < 60;
-        Predicate<Person> predicate_And = predicate_EqualName.and(predicate_under60);
-        Predicate<Person> predicate_Or = predicate_EqualName.or(predicate_under60);
-        Predicate<Person> predicate_negate = predicate_EqualName.negate();
+        Predicate<Person> predicate_legalAge = person -> person.getAge() > 18; //age above 18
+        Predicate<Person> predicate_under60 = person -> person.getAge() < 60; //age under 60
+        Predicate<Person> predicate_And = predicate_EqualName.and(predicate_under60); // name Angel and age under 60
+        Predicate<Person> predicate_Or = predicate_EqualName.or(predicate_under60);//name angel or under 60
+        Predicate<Person> predicate_negate = predicate_EqualName.negate();// diferent of predicate_equalname (Angel)
         //printing predicates
         list_person.stream().filter(predicate_EqualName).forEach(person ->System.out.print(person.getLastName()+" , "));
         System.out.println(" <- Predicate(Angel)");
